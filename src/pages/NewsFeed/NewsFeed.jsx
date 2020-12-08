@@ -1,8 +1,17 @@
+import React, { useContext } from 'react'
+import {
+  Redirect
+} from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext.js'
+
 const NewsFeed = () => {
+  const { isAuth } = useContext(AuthContext)
+
   return (
-    <div>
+    <React.Fragment>
       Hola que tal, este es tu newfeed
-    </div>
+      { !isAuth && <Redirect to="/login" /> }
+    </React.Fragment>
   )
 }
 

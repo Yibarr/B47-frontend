@@ -6,14 +6,17 @@ import {
   NavBar
 } from './components/index.js'
 import Routes from './Routes.js'
+import { AuthContextProvider } from './context/AuthContext.js'
 
 function App() {
 
   return (
     <React.Fragment>
       <Router>
-        <NavBar/>
-        <Routes/>
+        <AuthContextProvider>
+          <NavBar/>
+          <Routes/>
+        </AuthContextProvider>
       </Router>
     </React.Fragment>
   );
