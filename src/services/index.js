@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-
-export const pokemon = {
-  getPokemonByid: (id) => axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+export const auth = {
+  login: (body) => axios.post('https://instal-clone.herokuapp.com/api/v1/login', body)
 }
+
+

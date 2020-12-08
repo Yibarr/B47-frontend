@@ -1,6 +1,21 @@
+import {
+  Container,
+  Row,
+  Col
+} from 'reactstrap'
+
 const Profile = () => {
   return (
-    <h1>Profile</h1>
+    <Container>
+      <Row style={{ border: 'solid 1px', height: '500px' }}>
+        <Col xs="4" style={{ border: 'solid 1px' }}>
+          Columna
+        </Col>
+        <Col xs="8" style={{ border: 'solid 1px' }}>
+          Columna
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
