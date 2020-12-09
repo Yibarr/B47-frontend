@@ -2,9 +2,6 @@ import React from 'react'
 import {
   BrowserRouter as Router
 } from 'react-router-dom'
-import {
-  NavBar
-} from './components/index.js'
 import Routes from './Routes.js'
 import { AuthContextProvider } from './context/AuthContext.js'
 
@@ -14,8 +11,9 @@ function App() {
     <React.Fragment>
       <Router>
         <AuthContextProvider>
-          <NavBar/>
-          <Routes/>
+          <div style={{ minHeight: '100vh', backgroundColor: '#F9F9F9' }}>
+            <Routes />
+          </div>
         </AuthContextProvider>
       </Router>
     </React.Fragment>

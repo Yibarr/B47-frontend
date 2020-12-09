@@ -41,8 +41,6 @@ const Login = () => {
 
   return (
     <React.Fragment>
-      
-    
       <Container>
         <Row style={{ padding: '10% 0' }}>
           <Col xs={{ size: "4", offset: "4" }}>

@@ -1,4 +1,8 @@
 import {
+  PrivateRoute
+} from './components/index.js'
+
+import {
   Switch,
   Route
 } from 'react-router-dom'
@@ -8,16 +12,18 @@ import {
   NewsFeed,
   Profile,
   Login,
-  Signup
+  Signup,
+  Logout
 } from './pages/index.js'
 
 
 const Routes = () => (
     <Switch>
-      <Route exact path="/" component={NewsFeed}/>
       <Route exact path="/login" component={Login}/>
       <Route exact path="/signup" component={Signup}/>
-      <Route exact path="/profile" component={Profile}/>
+      <PrivateRoute exact path="/" component={NewsFeed}/>
+      <PrivateRoute exact path="/logout" component={Logout}/>
+      <PrivateRoute exact path="/profile" component={Profile}/>
       <Route component={NotFound}/>
     </Switch>
  )

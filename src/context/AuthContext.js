@@ -14,6 +14,12 @@ export const AuthContextProvider = (props) => {
     setIsAuth(true)
   }
 
+  const logOut = () => {
+    localStorage.removeItem('instababy-token')
+    setUser({})
+    setIsAuth(false)
+  }
+
   useEffect(() => {
     const token = localStorage.getItem('instababy-token')
     if (token) logIn(token);
@@ -23,7 +29,8 @@ export const AuthContextProvider = (props) => {
     value={{
       isAuth,
       user,
-      logIn
+      logIn,
+      logOut
     }}
   >
     { props.children }
